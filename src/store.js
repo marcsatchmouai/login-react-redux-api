@@ -88,15 +88,15 @@ export const handleLogin = (email, password) => {
       .then(res => res.json())
       .then (data => { 
         if(!data.success) {
-          return Promise.rejext(data) 
+          return Promise.reject(data) 
         }
-        dispatch({
+        return dispatch({
           type:'LOGIN_SUCCESS',
           payload: data,
         })
       })
       .catch (error => {
-        dispatch({
+        return dispatch({
           type:'LOGIN_ERROR',
           payload: error
         })
