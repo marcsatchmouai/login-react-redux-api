@@ -1,10 +1,10 @@
 import React from 'react'
 import Navbar from '../common/navbar'
-import Fondo from '../home/fondo.jpg'
+import Add from '../agregar/agregar'
 
 import { Container, Row, Col } from 'react-bootstrap';
 
-const Home = () => {
+const Listado = () => {
     return (
         <React.Fragment>
             <Container fluid>
@@ -14,9 +14,9 @@ const Home = () => {
                     </Col>
                 </Row>
                 
-                <Row>
+                <Row className="justify-content-md-center">
                     <Col>
-                        <img src={Fondo} className="img-fluid w-100" alt="Responsive image"/>
+                        <Add/>
                     </Col>
                 </Row>
                     
@@ -25,5 +25,5 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Listado
 
