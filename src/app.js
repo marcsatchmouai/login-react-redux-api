@@ -5,16 +5,16 @@ import {
 } from 'react-router-dom'
 import Login from './components/login'
 import Home from './components/home'
-import List from './components/listado'
-import Add from './components/agregar'
+import FilmList from './components/films/filmList'
+import AddFilm from './components/films/addFilm'
 
 function App() {
   return (
     <Router>
       <Route exact path={'/'} component={Login} />
       <Route exact path={'/home'} component={Home} />
-      <Route exact path={'/listado'} component={List} />
-      <Route exact path={'/agregar'} component={Add} />
+      <Route exact path={'/filmList'} component={FilmList} />
+      <Route exact path={'/addFilm'} component={AddFilm} />
     </Router>
   );
 }

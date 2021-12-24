@@ -1,0 +1,19 @@
+export const ADD_FILM = 'ADD_FILM';
+export const ADD_FILM_SUCCESS = 'ADD_FILM_SUCCESS';
+export const ADD_FILM_ERROR = 'ADD_FILM_ERROR';
+
+export const EDIT_FILM = 'EDIT_FILM';
+export const EDIT_FILM_SUCCESS = 'EDIT_FILM_SUCCESS';
+export const EDIT_FILM_ERROR = 'EDIT_FILM_ERROR';
+
+export const DELETE_FILM = 'DELETE_FILM';
+export const DELETE_FILM_SUCCESS = 'DELETE_FILM_SUCCESS';
+export const DELETE_FILM_ERROR = 'DELETE_FILM_ERROR';
+
+export const GET_FILM = 'GET_FILM';
+export const GET_FILM_SUCCESS = 'GET_FILM_SUCCESS';
+export const GET_FILM_ERROR = 'GET_FILM_ERROR';
+
+export const GET_FILMS = 'GET_FILMS';
+export const GET_FILMS_SUCCESS = 'GET_FILMS_SUCCESS';
+export const GET_FILMS_ERROR = 'GET_FILMS_ERROR';

@@ -1,10 +1,10 @@
 import React from 'react'
-import Navbar from '../common/navbar'
-import List from '../listado/listado'
+import Navbar from '../../common/navbar'
+import Add from './addFilm'
 
 import { Container, Row, Col } from 'react-bootstrap';
 
-const Listado = () => {
+const AddFilmForm = () => {
     return (
         <React.Fragment>
             <Container fluid>
@@ -13,10 +13,13 @@ const Listado = () => {
                         <Navbar/>
                     </Col>
                 </Row>
-                
-                <Row className="justify-content-md-center">
+                <br/>
+                <Row className="justify-content-md-center p-5">
                     <Col>
-                        <List/>
+                        <h2 className='text-center mb-4 font-weight-bold'>
+                            Agregar Nueva Pelicula
+                        </h2>
+                        <Add/>
                     </Col>
                 </Row>
                     
@@ -25,5 +28,5 @@ const Listado = () => {
     )
 }
 
-export default Listado
+export default AddFilmForm
 
