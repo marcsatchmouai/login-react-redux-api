@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Form, Row, Button, Col } from 'react-bootstrap';
 
-const AddFilm = ({ history }) => {
+import { addNewFilmAction } from '../../../store/actions/filmsActions';
+
+const AddFilm = () => {
     // useState Se utiliza para setear los valores en los campos del formulario.
     const [titulo, setTitulo] = useState('');
     const [genero, setGenero] = useState('');
@@ -37,20 +39,29 @@ const AddFilm = ({ history }) => {
         addNewFilm(film);
 
         // Redireccionar a la lista de peliculas.
-        history.push('/films');
+        //history.push('/films');
 
     };
     return (
+        
         <Form onSubmit={onSubmit}>
             <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridTitulo">
                 <Form.Label>Titulo</Form.Label>
-                <Form.Control type="text" placeholder="Titulo" />
+                <Form.Control 
+                    type="text" 
+                    value={titulo}
+                    placeholder="Titulo" 
+                    onChange={(e) => setTitulo(e.target.value)}/>
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridGenero">
                 <Form.Label>Genero</Form.Label>
-                <Form.Select defaultValue="Choose...">
+                <Form.Select 
+                    defaultValue="Choose..." 
+                    value={genero}
+                    onChange={(e) => setGenero(e.target.value)}
+                    >
                     <option>Seleccione...</option>
                     <option>Drama</option>
                     <option>Accion</option>
@@ -69,20 +80,30 @@ const AddFilm = ({ history }) => {
 
             <Form.Group className="mb-3" controlId="formGridAddress2">
                 <Form.Label>Director</Form.Label>
-                <Form.Control type="text" placeholder="" />
+                <Form.Control 
+                    type="text"
+                    value={director}
+                    onChange={(e) => setDirector(e.target.value)} 
+                    placeholder="" />
             </Form.Group>
 
             <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridCity">
                 <Form.Label>Año</Form.Label>
-                <Form.Control type="date" />
+                <Form.Control 
+                    type="date"
+                    value={anio} 
+                    onChange={(e) => setAnio(e.target.value)}/>
                 </Form.Group>
 
                 
 
                 <Form.Group as={Col} controlId="formGridZip">
                 <Form.Label>Duracion</Form.Label>
-                <Form.Control type="time"/>
+                <Form.Control 
+                    type="time"
+                    value={duracion}
+                    onChange={(e) => setDuracion(e.target.value)}/>
                 </Form.Group>
             </Row>
 
@@ -90,9 +111,16 @@ const AddFilm = ({ history }) => {
                 Guardar
             </Button>
             &nbsp;
-            <Button variant="danger" type="submit">
+            <Button variant="danger" type="cancel">
                 Cancelar
             </Button>
+            {loading ? <p> Loading... </p> : null}
+
+            {error ? (
+            <p className='alert alert-danger p-2 m-4 text-center'>
+                Ocurrio un error.
+            </p>
+            ) : null}
         </Form>
         
     )

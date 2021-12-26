@@ -16,7 +16,7 @@ const Home = () => {
                 
                 <Row>
                     <Col>
-                        <img src={Fondo} className="img-fluid w-100" alt="Responsive image"/>
+                        <img src={Fondo} className="img-fluid w-100" alt="Responsive"/>
                     </Col>
                 </Row>
                     

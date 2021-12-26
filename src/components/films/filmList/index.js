@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Container, Row, Col, Table } from 'react-bootstrap';
 
+
 import Navbar from '../../common/navbar'
 import List from './filmList'
 
@@ -14,7 +15,10 @@ const FilmList = () => {
     useEffect(() => {
         const getAllFilms = () => dispatch(getAllFilmsAction());
         getAllFilms();
+        
       }, []);
+
+      console.log(useSelector((state) => state.films))
     
     const { loading, error, films } = useSelector((state) => state.films);
     
@@ -26,18 +30,17 @@ const FilmList = () => {
                         <Navbar/>
                     </Col>
                 </Row>
-                <h2 className='text-center my-5'>Listado de Peliculas</h2>
-
-                {loading ? <h4 className='text-center'> Loading... </h4> : null}
-
-                {error ? (
-                    <p className='alert alert-danger p-2 m-4 text-center'>
-                        Ocurrio un error.
-                    </p>
-                ) : null}
-
                 <Row className="justify-content-md-center p-5">
                     <Col>
+                        <h2 className='text-center my-5'>Listado de Peliculas</h2>
+
+                        {loading ? <h4 className='text-center'> Loading... </h4> : null}
+
+                        {error ? (
+                            <p className='alert alert-danger p-2 m-4 text-center'>
+                                Ocurrio un error.
+                            </p>
+                        ) : null}
                         <div className="justify-content-md-center">
                             <Table striped bordered hover>
                                 <thead>
