@@ -13,11 +13,12 @@ const Navigationbar = () => {
                     <Nav className="me-auto">
                         <Nav.Link href="/home">Home</Nav.Link>
                         <NavDropdown title="Peliculas" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="/Listado">Listado</NavDropdown.Item>
-                            <NavDropdown.Item href="/agregar">Agregar</NavDropdown.Item>
+                            <NavDropdown.Item href="/filmList">Listado</NavDropdown.Item>
+                            <NavDropdown.Item href="/addFilm">Agregar</NavDropdown.Item>
                             
                         </NavDropdown>
                     </Nav>
+                    <hr className=""/>
                     <Navbar.Text>
                         <span><FaRegUser className='mb-1'/> Logout</span>
                     </Navbar.Text>
