@@ -40,33 +40,31 @@ const List = ({ film }) => {
     };
 
     return (
-        <tbody>
-            <tr>
-                <td>{titulo}</td>
-                <td>{genero}</td>
-                <td>{anio}</td>
-                <td>{duracion}</td>
-                <td>{director}</td>
-                <td>
-                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                        <button 
-                            type="button" 
-                            className="btn btn-warning"
-                            onClick={() => onEditRedirection(_id)}
-                        >
-                            Editar
-                        </button>
-                        <button 
-                            type="button" 
-                            className="btn btn-danger"
-                            onClick={() => onDeleteFilm(_id)}
-                        >
-                            Eliminar
-                        </button>
-                    </div>              
-                </td>
-            </tr>
-        </tbody>
+        <tr>
+            <td>{titulo}</td>
+            <td>{genero}</td>
+            <td>{anio}</td>
+            <td>{duracion}</td>
+            <td>{director}</td>
+            <td>
+                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                    <button 
+                        type="button" 
+                        className="btn btn-warning"
+                        onClick={() => onEditRedirection(_id)}
+                    >
+                        Editar
+                    </button>
+                    <button 
+                        type="button" 
+                        className="btn btn-danger"
+                        onClick={() => onDeleteFilm(_id)}
+                    >
+                        Eliminar
+                    </button>
+                </div>              
+            </td>
+        </tr>
     )
 }
 

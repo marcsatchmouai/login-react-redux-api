@@ -18,8 +18,7 @@ const FilmList = () => {
         
       }, []);
 
-      console.log(useSelector((state) => state.films))
-    
+       
     const { loading, error, films } = useSelector((state) => state.films);
     
     return (
