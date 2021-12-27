@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Container, Nav, NavDropdown, Button } from 'react-bootstrap';
 import { FaRegUser } from 'react-icons/fa';
 
 const Navigationbar = () => {
@@ -20,7 +20,12 @@ const Navigationbar = () => {
                     </Nav>
                     <hr className=""/>
                     <Navbar.Text>
-                        <span><FaRegUser className='mb-1'/> Logout</span>
+                        <Nav.Link href="/">
+                            <span>
+                                <FaRegUser className='mb-1'/> 
+                                    Logout
+                            </span>
+                        </Nav.Link>
                     </Navbar.Text>
                 </Navbar.Collapse>
             </Container>

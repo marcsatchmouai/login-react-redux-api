@@ -4,7 +4,7 @@ import { Form, Row, Button, Col } from 'react-bootstrap';
 
 import { addNewFilmAction } from '../../../store/actions/filmsActions';
 
-const AddFilm = () => {
+const AddFilm = ({ history }) => {
     // useState Se utiliza para setear los valores en los campos del formulario.
     const [titulo, setTitulo] = useState('');
     const [genero, setGenero] = useState('');
@@ -39,8 +39,7 @@ const AddFilm = () => {
         addNewFilm(film);
 
         // Redireccionar a la lista de peliculas.
-        //history.push('/films');
-
+        
     };
     return (
         
@@ -91,7 +90,7 @@ const AddFilm = () => {
                 <Form.Group as={Col} controlId="formGridCity">
                 <Form.Label>Año</Form.Label>
                 <Form.Control 
-                    type="date"
+                    type="text"
                     value={anio} 
                     onChange={(e) => setAnio(e.target.value)}/>
                 </Form.Group>

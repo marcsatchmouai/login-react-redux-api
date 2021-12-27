@@ -33,6 +33,8 @@ export function addNewFilmAction(film) {
         'La pelicula se agrego correctamente...',
         'success'
       );
+      //window.location = "/filmList"
+      
     } catch (error) {
       console.error(error);
       // Si falla, envia una notificacion de error.

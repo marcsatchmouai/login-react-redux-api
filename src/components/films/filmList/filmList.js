@@ -10,7 +10,6 @@ import {
   
 
 const List = ({ film }) => {
-
     const { _id, titulo, genero, anio, duracion, director } = film;
 
     const dispatch = useDispatch();
@@ -38,6 +37,8 @@ const List = ({ film }) => {
         dispatch(editFilmAction(film));
         history.push(`/films/editFilm/editFilm/${id}`);
     };
+
+
 
     return (
         <tr>
