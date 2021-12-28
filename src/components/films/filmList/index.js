@@ -44,12 +44,12 @@ const FilmList = () => {
                             <Table striped bordered hover>
                                 <thead>
                                     <tr>
-                                        <th scope="col">Titulo</th>
-                                        <th scope="col">Genero</th>
-                                        <th scope="col">Año</th>
-                                        <th scope="col">Duracion</th>
-                                        <th scope="col">Director</th>
-                                        <th scope="col">Acciones</th>
+                                        <th className="col">Titulo</th>
+                                        <th className="col">Genero</th>
+                                        <th className="col">Año</th>
+                                        <th className="col">Duracion</th>
+                                        <th className="col">Director</th>
+                                        <th className="col">Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>

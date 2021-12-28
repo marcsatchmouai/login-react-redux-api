@@ -5,7 +5,7 @@ import Swal from 'sweetalert2'
 
 import {
     deleteFilmAction,
-    editFilmAction,
+    editFilm,
 } from '../../../store/actions/filmsActions';
   
 
@@ -34,11 +34,9 @@ const List = ({ film }) => {
     };
 
     const onEditRedirection = (id) => {
-        dispatch(editFilmAction(film));
-        history.push(`/films/editFilm/editFilm/${id}`);
+        dispatch(editFilm(film));
+        history.push(`/editFilm/${id}`);
     };
-
-
 
     return (
         <tr>
@@ -48,7 +46,7 @@ const List = ({ film }) => {
             <td>{duracion}</td>
             <td>{director}</td>
             <td>
-                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <div className="btn-group" role="group" aria-label="Basic mixed styles example">
                     <button 
                         type="button" 
                         className="btn btn-warning"

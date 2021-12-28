@@ -27,17 +27,19 @@ export const handleLogin = (email, password) => {
     dispatch({
       type: LOGIN_PENDING
     })
+    //http://localhost:4000
     //https://trabajo-mcga-server-marc.herokuapp.com/
     const options = {
-      baseURL: 'http://localhost:4000',
+      baseURL: 'https://trabajo-mcga-server-marc.herokuapp.com/',
       timeout: 25000,
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
     }
+    //http://localhost:4000/login
     //https://trabajo-mcga-server-marc.herokuapp.com/login
-    return fetch(`http://localhost:4000/login`, {
+    return fetch(`https://trabajo-mcga-server-marc.herokuapp.com/login`, {
       ...options, body: JSON.stringify({ email, password }) 
     })
       .then(res => res.json())

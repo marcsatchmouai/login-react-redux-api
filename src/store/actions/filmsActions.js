@@ -135,10 +135,27 @@ const deleteFilmError = (status) => ({
 export const editFilmAction = (film) => {
   return async (dispatch) => {
     dispatch(editFilm(film));
+    try {
+      await client.put(`${filmUrl}`,film);
+      dispatch(editFilmSuccess(film));
+      Swal.fire(
+        'Editado',
+        'El producto se edito correctamente...',
+        'success'
+      );
+    } catch (error) {
+      console.error(error);
+      dispatch(editFilmError(true));
+      Swal.fire({
+        icon: 'error',
+        title: 'Ocurrio un error.',
+        text: 'Ocurrio un error al editar el producto, intenta de nuevo.',
+      });
+    }
   };
 };
 
-const editFilm = (film) => ({
+export const editFilm = (film) => ({
   type: EDIT_FILM,
   payload: film,
 });

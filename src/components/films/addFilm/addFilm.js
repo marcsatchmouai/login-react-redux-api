@@ -109,10 +109,6 @@ const AddFilm = ({ history }) => {
             <Button variant="primary" type="submit">
                 Guardar
             </Button>
-            &nbsp;
-            <Button variant="danger" type="cancel">
-                Cancelar
-            </Button>
             {loading ? <p> Loading... </p> : null}
 
             {error ? (
