@@ -140,7 +140,7 @@ export const editFilmAction = (film) => {
       dispatch(editFilmSuccess(film));
       Swal.fire(
         'Editado',
-        'El producto se edito correctamente...',
+        'La Pelicula se edito correctamente...',
         'success'
       );
     } catch (error) {
@@ -149,7 +149,7 @@ export const editFilmAction = (film) => {
       Swal.fire({
         icon: 'error',
         title: 'Ocurrio un error.',
-        text: 'Ocurrio un error al editar el producto, intenta de nuevo.',
+        text: 'Ocurrio un error al editar la pelicula, intenta de nuevo.',
       });
     }
   };
